@@ -86,8 +86,14 @@ public class KNN {
 			result.categoryAssignment[i] = winningCategory;	
 		}
 		// calculate accuracy
+		for (int i = 0; i < testData.length; i++) {
+			if(testData[i].name.equals(result.categoryAssignment[i])) {
+				result.accuracy++;
+			}
+		}
+		result.accuracy /= testData.length;
 
-		return null;
+		return result;
 	}
 
 	public double getDistance(Item item, Item otherItem) {
