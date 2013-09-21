@@ -87,19 +87,12 @@ public class KNN {
 		}
 		// calculate accuracy
 		for (int i = 0; i < testData.length; i++) {
-			if(testData[i].name.equals(result.categoryAssignment[i])) {
+			if(testData[i].category.equals(result.categoryAssignment[i])) {
 				result.accuracy++;
 			}
 		}
 		result.accuracy /= testData.length;
 
 		return result;
-	}
-
-	public double getDistance(Item item, Item otherItem) {
-		return Math
-				.sqrt(((otherItem.features[0] - item.features[0]) * (otherItem.features[0] - item.features[0]))
-						+ ((otherItem.features[1] - item.features[1]) * (otherItem.features[1] - item.features[1]))
-						+ ((otherItem.features[2] - item.features[2]) * (otherItem.features[2] - item.features[2])));
 	}
 }
