@@ -76,7 +76,7 @@ public class KNN {
 				if (votes == null) {
 					continue;
 				}
-				if (votes > maxVotes) {
+				if((votes == maxVotes && category.compareToIgnoreCase(winningCategory) < 0 ) || (votes > maxVotes)) {
 					winningCategory = category;
 					maxVotes = votes;
 				}
