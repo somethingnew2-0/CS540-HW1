@@ -20,7 +20,7 @@ public class DistanceItem implements Comparable<DistanceItem> {
 
 	@Override
 	public int compareTo(DistanceItem otherItem) {
-		return Double.compare(distance, otherItem.distance);
+		return Double.compare(otherItem.distance, distance);
 	}
 
 }

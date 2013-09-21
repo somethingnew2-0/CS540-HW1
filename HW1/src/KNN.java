@@ -45,7 +45,7 @@ public class KNN {
 						testItem);
 				if (maxHeap.size() < k) {
 					maxHeap.offer(trainingDistance);
-				} else if (maxHeap.peek().compareTo(trainingDistance) > 0) {
+				} else if (maxHeap.peek().compareTo(trainingDistance) < 0) {
 					maxHeap.poll();
 					maxHeap.offer(trainingDistance);
 				}
