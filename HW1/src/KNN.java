@@ -64,7 +64,7 @@ public class KNN {
 				String category = distanceItem.getItem().category;
 				Integer votes = election.get(category);
 				if (votes == null) {
-					election.put(category, 1);
+					votes = 0;
 				}
 				election.put(category, votes + 1);
 			}
