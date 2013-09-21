@@ -1,0 +1,9 @@
+.metadata/*
+*/.settings/*
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
